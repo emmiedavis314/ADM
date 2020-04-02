@@ -1,4 +1,4 @@
 # Class that contains the middle portion of the game
 
-class middle:
+class Middle():
     pass #only here because classes cannot be empty
