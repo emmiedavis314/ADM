@@ -5,21 +5,33 @@ from tkinter import *
 from tkinter.ttk import *
 
 #root that creates the main window, has to be first
+'''
 class GUI(): 
 
-    MainWindow = Tk()
+    #MainWindow = Tk()
+    #MainWindow.geometry("500x500")
 
     #define functions
-    def header(self):
-        h = Frame(GUI.MainWindow)
-        title = Label(h, text="Welcome to Aggie Decision Maker!")
+    def mainGame(self):
+        main = Tk()
+        main.geometry("500x500")
+        title = Label(main, text="Welcome to Aggie Decision Maker!")
         title.pack()
-        subtitle = Label(h, text="This is the subtitle")
+        subtitle = Label(main, text="This is the subtitle")
         subtitle.pack()
-        button = Button(h, text="Test")
+        button = Button(main, text="Test")
         button.pack()
-        h.pack()
+        
 
+    def menu(self):
+        m = Tk()
+        m.geometry("500x500")
+        title = Label(m , text="Welcome to Aggie Decision Maker!")
+        title.pack()
+        self.button = Button(m, text="Begin", command=GUI.mainGame(self))
+        self.button.pack()
+        m.pack()
+    
     def healthbars(self,health, gpa, social):
         progress = Frame(GUI.MainWindow)
         he = Frame(progress)
@@ -44,6 +56,7 @@ class GUI():
         so.pack()
         gp.pack()
         progress.pack()
+        
 
 
     def footer(self):
@@ -51,6 +64,37 @@ class GUI():
         foot = Label(b, text="Created for CSCE 445 @ TAMU by Natalie Burks, Emily Davis, Allison Reuthinger")
         foot.pack()
         b.pack(side=BOTTOM)
+        
+'''
+
+class menu():
+
+    def __init__(self,master):
+        self.master = master
+        self.frame = Frame(self.master)
+        title = Label(self.master , text="Welcome to Aggie Decision Maker!")
+        self.b1 = Button(self.master, text="Begin",command=self.newWindow)
+        foot = Label(self.master, text="Created for CSCE 445 @ TAMU by Natalie Burks, Emily Davis, Allison Reuthinger")
+        foot.pack()
+        foot.pack(side=BOTTOM)
+        title.pack()
+        self.b1.pack()
+        self.frame.pack()
+
+    def newWindow(self):
+        self.master.withdraw()
+        self.new_Window = Toplevel(self.master, bg='#500000')
+        self.frame = Frame(self.master)
+        
+
+class mainGame():
+
+    def __init__(self,master):
+        self.master = master
+        self.frame = Frame(self.master)   
+        self.b3 = Button(self.master,text="text")         
+
+
 
     #create widgets
 
