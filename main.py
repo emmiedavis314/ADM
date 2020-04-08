@@ -5,7 +5,7 @@ Description: Text based game decision maker game for our CSCE 445 class where us
 majoring in Computer Science and make decisons that have
 have an effect on GPA, health, and grades. Also be an option to play in the compare the different experiences.
 
-Authors: Natalie Burks, Emily Davis, and Allie Reuthinger
+Authors: Natalie Burks, Emily Davis, and Alli Reuthinger
 '''
 
 #imports

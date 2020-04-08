@@ -31,33 +31,9 @@ class GUI():
         self.button = Button(m, text="Begin", command=GUI.mainGame(self))
         self.button.pack()
         m.pack()
-    
-    def healthbars(self,health, gpa, social):
-        progress = Frame(GUI.MainWindow)
-        he = Frame(progress)
-        so = Frame(progress)
-        gp = Frame(progress)
-        h = Progressbar(he, orient=HORIZONTAL, length=100, mode='determinate')
-        s = Progressbar(so, orient=HORIZONTAL, length=100, mode='determinate')
-        g = Progressbar(gp, orient=HORIZONTAL, length=100, mode='determinate')
-        h['value'] = health
-        s['value'] = gpa
-        g['value'] = social
-        h_text = Label(he, text="Health: ")
-        h_text.pack(side=LEFT)
-        s_text = Label(so, text="Social:  ")
-        s_text.pack(side=LEFT)
-        g_text = Label(gp, text="GPA:     ")
-        g_text.pack(side=LEFT)
-        h.pack(side=RIGHT)
-        s.pack(side=RIGHT)
-        g.pack(side=RIGHT)
-        he.pack()
-        so.pack()
-        gp.pack()
-        progress.pack()
+ '''
         
-
+'''
 
     def footer(self):
         b = Frame(GUI.MainWindow)
@@ -81,11 +57,38 @@ class menu():
         self.b1.pack()
         self.frame.pack()
 
+    def healthbars(self, health, gpa, social):
+        progress = Frame(self.frame)
+        he = Frame(progress)
+        so = Frame(progress)
+        gp = Frame(progress)
+        h = Progressbar(he, orient=HORIZONTAL, length=100, mode='determinate')
+        s = Progressbar(so, orient=HORIZONTAL, length=100, mode='determinate')
+        g = Progressbar(gp, orient=HORIZONTAL, length=100, mode='determinate')
+        h['value'] = health
+        s['value'] = gpa
+        g['value'] = social
+        h_text = Label(he, text="Health: ")
+        h_text.pack(side=LEFT)
+        s_text = Label(so, text="Social:  ")
+        s_text.pack(side=LEFT)
+        g_text = Label(gp, text="GPA:     ")
+        g_text.pack(side=LEFT)
+        h.pack(side=RIGHT)
+        s.pack(side=RIGHT)
+        g.pack(side=RIGHT)
+        he.pack()
+        so.pack()
+        gp.pack()
+        progress.pack()
+
     def newWindow(self):
-        self.master.withdraw()
-        self.new_Window = Toplevel(self.master, bg='#500000')
+        self.frame.destroy
         self.frame = Frame(self.master)
-        
+        self.healthbars(100, 100, 100)
+        title = Label(self.master, text='Question 1')
+        title.pack()
+        self.frame.pack()
 
 class mainGame():
 
