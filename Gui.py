@@ -3,7 +3,7 @@
 #import
 from tkinter import *
 from tkinter.ttk import *
-
+from beginning import *
 #root that creates the main window, has to be first
 '''
 class GUI(): 
@@ -43,13 +43,19 @@ class GUI():
         
 '''
 
-class menu():
+
+class Menu():
+
+    s_bar = 100
+    h_bar = 100
+    g_bar = 100
+
 
     def __init__(self,master):
         self.master = master
         self.frame = Frame(self.master)
         title = Label(self.master , text="Welcome to Aggie Decision Maker!")
-        self.b1 = Button(self.master, text="Begin",command=self.newWindow)
+        self.b1 = Button(self.master, text="Begin",command=lambda:[self.b1.pack_forget(), self.newWindow()])
         foot = Label(self.master, text="Created for CSCE 445 @ TAMU by Natalie Burks, Emily Davis, Allison Reuthinger")
         foot.pack()
         foot.pack(side=BOTTOM)
@@ -57,7 +63,12 @@ class menu():
         self.b1.pack()
         self.frame.pack()
 
-    def healthbars(self, health, gpa, social):
+    def update_health(self, h, s, g):
+        Menu.h_bar -= h
+        Menu.s_bar -= s
+        Menu.g_bar -= g
+
+    def healthbars(self):
         progress = Frame(self.frame)
         he = Frame(progress)
         so = Frame(progress)
@@ -65,9 +76,9 @@ class menu():
         h = Progressbar(he, orient=HORIZONTAL, length=100, mode='determinate')
         s = Progressbar(so, orient=HORIZONTAL, length=100, mode='determinate')
         g = Progressbar(gp, orient=HORIZONTAL, length=100, mode='determinate')
-        h['value'] = health
-        s['value'] = gpa
-        g['value'] = social
+        h['value'] = Menu.h_bar
+        s['value'] = Menu.s_bar
+        g['value'] = Menu.g_bar
         h_text = Label(he, text="Health: ")
         h_text.pack(side=LEFT)
         s_text = Label(so, text="Social:  ")
@@ -83,12 +94,12 @@ class menu():
         progress.pack()
 
     def newWindow(self):
-        self.frame.destroy
         self.frame = Frame(self.master)
-        self.healthbars(100, 100, 100)
+        self.healthbars()
+        self.frame.pack()
         title = Label(self.master, text='Question 1')
         title.pack()
-        self.frame.pack()
+        Begin.bQuest1(self)
 
 class mainGame():
 

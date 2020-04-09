@@ -70,7 +70,7 @@ if __name__ == '__main__':
 	root = Tk()
 	#root.geometry('250x250')
 	root['bg'] = '#500000'
-	b = menu(root)
+	b = Menu(root)
 	root.mainloop()
 
 #creating the GUI object
