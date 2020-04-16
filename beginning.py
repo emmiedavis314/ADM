@@ -1,5 +1,5 @@
 # Class that contains the beginning portion of the game
-from Menu import *
+from Gui import *
 from tkinter import *
 from tkinter.ttk import *
 
@@ -14,9 +14,9 @@ class Begin(Menu):
         option_s = "Suggest Chick-Fil-A at the MSC for lunch!"
         option_g = "Skip lunch and go to class."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda:[Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5)])
-        s = Button(self.frame, text=option_s, command=lambda:[Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5)])
-        g = Button(self.frame, text=option_g, command=lambda:[Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0)])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest2', 'question2')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest2', 'question2')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest2', 'question2')])
         question.pack()
         h.pack()
         s.pack()
@@ -24,15 +24,21 @@ class Begin(Menu):
 
 
     def bQuest2(self):
-        self.healthbars()
-        question_description = Label(self.master, text="this is question2")
-        #option_h = "health"
-        #option_s = "social"
-        #option_g = "gpa"
-        question_description.pack()
-        #option_h.pack()
-        #option_s.pack()
-        #option_g.pack()
+        question_description = "help"
+        option_h = "help1"
+        option_s = "help2!"
+        option_g = "help3"
+        question = Label(self.frame, text=question_description)
+        h = Button(self.frame, text=option_h,
+                   command=lambda: [Begin.bQuest2(self), self.frame.pack_forget, self.update_health(0, 5, 5)])
+        s = Button(self.frame, text=option_s,
+                   command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5)])
+        g = Button(self.frame, text=option_g,
+                   command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0)])
+        question.pack()
+        h.pack()
+        s.pack()
+        g.pack()
 
     def bQuest3(self):
         pass
@@ -40,5 +46,5 @@ class Begin(Menu):
     def bQuest4(self):
         pass
 
-    def bQuest5(self):   
-        pass         
+    def bQuest5(self):
+        pass
