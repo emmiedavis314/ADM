@@ -44,12 +44,11 @@ class Begin(Menu):
         question_description = "It’s the second week of school and your classes are starting to pick up. Your first " \
                                "programming assignment is not due until next week though. Do you: "
         option_h = "Go to the gym and get swole. I can start on it tomorrow."
-        option_s = "Procrastinate and play Animal Crossing with some friends, it’s not due until next week anyway.(If " \
-                   "they choose this option then have a pop up stating that they had to turn the project in late) "
+        option_s = "Procrastinate and play Animal Crossing with some friends, it’s not due until next week anyway."
         option_g = "Start early, you have never coded before."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest4', 'question 4')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest4', 'question 4')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest4', 'question 4'), self.popup1()])
         g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest4', 'question 4')])
         question.pack()
         h.pack()
@@ -81,7 +80,7 @@ class Begin(Menu):
         option_s = "Meet up with your suitemates for a breakfast date"
         option_g = "No way. What if they take attendance?"
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest6', 'question 6')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.newWindow2('bQuest6', 'question 6'), self.update_health(0, 5, 5)])
         s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest6', 'question 6')])
         g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest6', 'question 6')])
         question.pack()
@@ -94,12 +93,11 @@ class Begin(Menu):
         question_description = "There is a frat party this weekend and your new found college friends have invited " \
                                "you to come. Should you: "
         option_h = "Go for a run."
-        option_s = "Go and have fun! This is your first college party. (random event: cops got called, and everyone " \
-                   "underaged went to jail.)"
+        option_s = "Go and have fun! This is your first college party."
         option_g = "Start planning for the week to come."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest7', 'question 7')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest7', 'question 7')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest7', 'question 7'), self.popup2()])
         g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest7', 'question 7')])
         question.pack()
         h.pack()
@@ -163,13 +161,12 @@ class Begin(Menu):
                                "out to support him. However, you put off a programming assignment (that’s due at " \
                                "midnight!!!) to study for all of your exams. Do you: "
         option_h = "Volunteer to help with warm ups! You can exercise and support your family."
-        option_s = "Go to the game and cheer the loudest that you can! Family is more important than Homework.(popup " \
-                   "with a more decrease to GPA)"
+        option_s = "Go to the game and cheer the loudest that you can! Family is more important than Homework."
         option_g = "Tell your brother that you will congratulate him with ice cream when he is done, and head " \
                    "straight home to finish your assignment."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest11', 'question 11')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest11', 'question 11')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest11', 'question 11'), self.popup3()])
         g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest11', 'question 11')])
         question.pack()
         h.pack()
@@ -182,11 +179,12 @@ class Begin(Menu):
                                "take a little bit of a break this week. Do you: "
         option_h = "Train for that weightlifting competition coming up.(popup. Win the weightlifting competition)"
         option_s = "Go out with some friends. Do you even remember what they look like?"
-        option_g = "Have some nice time to yourself. You have been meaning to read that book which has been collecting dust."
+        option_g = "Have some nice time to yourself. You have been meaning to read that book which has been " \
+                   "collecting dust. "
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest12', 'question 12')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest12', 'question 12')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest12', 'question 12')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest12', 'question 12'), self.popup4()])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest12', 'question 12'), self.popup5()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest12', 'question 12'), self.popup5()])
         question.pack()
         h.pack()
         s.pack()
@@ -212,7 +210,7 @@ class Begin(Menu):
         question_description = "Unfortunately the break you decided to take last week has increased " \
                                "your workload this week. Do you: "
         option_h = "Skip class. I really need to get this work done."
-        option_s = "Skip class and stay up late. You didn’t realize how much work you were procrastinating on."
+        option_s = "Skip class and stay up late. You didn't realize how much work you were procrastinating on."
         option_g = "Go to class. Cheers to late nights at Zachary."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest14', 'question 14')])
@@ -242,7 +240,8 @@ class Begin(Menu):
     def bQuest15(self):
 
         question_description = "Lectures have not been useful recently. You take notes in class, ask " \
-                               "questions, and pay attention yet you still have to spend hours on the homework. Do you: "
+                               "questions, and pay attention yet you still have to spend hours on the homework. Do " \
+                               "you: "
         option_h = "Only skip one class to get your frustration under control. You are paying for this after all."
         option_s = "Skip class and hang out with your friends."
         option_g = "Skip lectures this week. It’s not like they are useful anyway."
@@ -261,13 +260,11 @@ class Begin(Menu):
                                "weekend and has invited you. However, a major project is due in your history class " \
                                "this Sunday. Do you: "
         option_h = "Don’t go and instead invest the money that you were going to spend on the trip."
-        option_s = "Go!!! You have never been to California and it's your best friend. (random: The flight on the way " \
-                   "back was delayed and the WiFi on the plane was not working. You couldn’t finish the project in time " \
-                   "and you had to beg the professor to let you turn it in late.)"
+        option_s = "Go!!! You have never been to California and it's your best friend."
         option_g = "Send a birthday gift instead. You really can’t miss the deadline for this project."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest17', 'question 17')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest17', 'question 17')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest17', 'question 17'), self.popup6()])
         g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest17', 'question 17')])
         question.pack()
         h.pack()
@@ -279,16 +276,13 @@ class Begin(Menu):
         question_description = "There is an event going on this week where tech companies are going to " \
                                "showcase their internships. Do you: "
         option_h = "Don’t go. I’m just going to apply to companies online."
-        option_s = "Go and talk to the companies. Maybe they would like your work ethic. " \
-                   "(random: The event was during one of your classes and you missed an attendance " \
-                   "grade. It would’ve been worth it, but the companies just told you to apply online " \
-                   "and it’s unlikely you will get a callback because they don’t hire freshmen."
+        option_s = "Go and talk to the companies. Maybe they would like your work ethic."
         option_g = "Don’t go because you have not built up enough skill yet. You then spend " \
                    "all weekend on learning app development."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest18', 'question 18')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest18', 'question 18')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest18', 'question 18')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest18', 'question 18'), self.popup7()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest18', 'question 18'), self.popup8()])
         question.pack()
         h.pack()
         s.pack()
@@ -349,13 +343,11 @@ class Begin(Menu):
         option_s = "Head over to the rec to play some pickup sand volleyball with some friends " \
                    "to relieve some stress."
         option_g = "Burn the midnight oil to get your project done early. You never know what " \
-                   "problems might come up. (random: you get sick because you haven’t " \
-                   "been eating well or getting enough sleep, and therefore have to turn your " \
-                   "paper in late) "
+                   "problems might come up."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest22', 'question 22')])
         s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest22', 'question 22')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest22', 'question 22')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest22', 'question 22'), self.popup9()])
         question.pack()
         h.pack()
         s.pack()
@@ -364,7 +356,8 @@ class Begin(Menu):
     def bQuest22(self):
 
         question_description = "You’ve been invited to your fish camp counselor’s ring dunk. You don’t really " \
-                               "know them that well, but you can’t wait to find out what all the hype is about. Do you: "
+                               "know them that well, but you can’t wait to find out what all the hype is about. Do " \
+                               "you: "
         option_h = "Go to the dunk, but head out after you’ve congratulated your counselors " \
                    "and said hi to a few people. "
         option_s = "Go to the dunk, cheer on your mom and dad, and enjoy a crazy camp reunion!"
@@ -405,13 +398,12 @@ class Begin(Menu):
                    "energy to show her around campus before the game."
         option_s = "Put everything off so that you can show your friend the full Aggie " \
                    "experience. She’s leaving after the game anyways, so you’ll have the rest " \
-                   "of the weekend to study. (Random: her battery dies and has to stay a few " \
-                   "extra days, so you have to cram for the test on Monday morning.)"
+                   "of the weekend to study."
         option_g = "After you show her around campus some, you go to The Brew so that you" \
                    "both can get some last minute studying in before the game."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest25', 'question 25')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest25', 'question 25')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest25', 'question 25'), self.popup10()])
         g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest25', 'question 25')])
         question.pack()
         h.pack()
@@ -421,7 +413,8 @@ class Begin(Menu):
     def bQuest25(self):
 
         question_description = "Thanksgiving is next week, you have several projects due the following week," \
-                               "but you will be in the middle of nowhere with your family with no internet service. Do you:"
+                               "but you will be in the middle of nowhere with your family with no internet service. " \
+                               "Do you: "
         option_h = "Go grocery shopping and meal prep now, so that you can focus on your" \
                    "project and still eat healthy when you get back."
         option_s = "Get started now, but find the nearest Starbucks to work at while you're " \
@@ -449,14 +442,11 @@ class Begin(Menu):
                    "boring options from Sbisa."
         option_s = "Get a peer to take notes for you, while you go play frisbee with your" \
                    "friends before not seeing each other for a whole week."
-        option_g = "You decided to suck it up and stay to take notes for all of your friends." \
-                   "(random: Pop quiz! Good thing you were present. Professor KillJoy’s " \
-                   "random question about the color of his shirt earned you 10 bonus points " \
-                   "on the next test.)"
+        option_g = "You decided to suck it up and stay to take notes for all of your friends."
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest27', 'question 27')])
         s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest27', 'question 27')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest27', 'question 27')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest27', 'question 27'), self.popup11()])
         question.pack()
         h.pack()
         s.pack()
@@ -467,15 +457,13 @@ class Begin(Menu):
         question_description = "Your registration time begins at 5:45am tomorrow morning. Do you: "
         option_h = "You don’t want to miss your registration time, so you go to bed extra early."
         option_s = "Stay up all night at iHop with a friend in order to not oversleep and be" \
-                   "prepared with schedule options by 5:45am. (random: In all your efforts to " \
-                   "not oversleep by staying up all night, you fall asleep 5 minutes before your" \
-                   "registration time, and some of your classes fill up.)"
+                   "prepared with schedule options by 5:45am."
         option_g = "Your schedule options have already been planned for weeks, so you work " \
                    "on homework, go to bed at your normal time, and wake up 30 minutes " \
                    "early to register. "
         question = Label(self.frame, text=question_description)
         h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest28', 'question 28')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest28', 'question 28')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest28', 'question 28'), self.popup12()])
         g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest28', 'question 28')])
         question.pack()
         h.pack()
