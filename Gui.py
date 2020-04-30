@@ -2,6 +2,7 @@
 
 # import
 import sys
+import tkinter
 from tkinter import *
 from tkinter import ttk
 from tkinter.ttk import *
@@ -28,10 +29,10 @@ class Menu():
     def __init__(self, master):
         self.master = master
         self.frame = Frame(self.master)
-        title = Label(self.master, text="Welcome to Aggie Decision Maker!")
-        self.b1 = Button(self.master, text="Begin",
+        title = tkinter.Label(self.master, text = 'Welcome to Aggie Decision Maker!', font = ('Helvetica',30), bg = '#500000', fg = 'white')
+        self.b1 = tkinter.Button(self.master, text="Begin",
                          command=lambda: [self.b1.pack_forget(), self.newWindow(), title.pack_forget()])
-        foot = Label(self.master, text="Created for CSCE 445 @ TAMU by Natalie Burks, Emily Davis, Allison Reuthinger")
+        foot = tkinter.Label(self.master, text="Created for CSCE 445 @ TAMU by Natalie Burks, Emily Davis, Allison Reuthinger", font = ('Helvetica'), bg = '#500000', fg = 'white')
         foot.pack()
         foot.pack(side=BOTTOM, pady=10)
         title.pack(pady=15, padx=20)
@@ -63,10 +64,10 @@ class Menu():
         # self.newWindow()
 
     def healthbars(self, s_bar, g_bar, h_bar):
-        progress = Frame(self.frame)
-        he = Frame(progress)
-        so = Frame(progress)
-        gp = Frame(progress)
+        progress = tk.Frame(self.frame, bg='white')
+        he = tk.Frame(progress, bg='white')
+        so = tk.Frame(progress, bg='white')
+        gp = tk.Frame(progress, bg='white')
         hStyle = ttk.Style()
         hStyle.theme_use('alt')
         sStyle = ttk.Style()
@@ -109,11 +110,11 @@ class Menu():
         h['value'] = Menu.h_bar
         s['value'] = Menu.s_bar
         g['value'] = Menu.g_bar
-        h_text = Label(he, text="Health: ")
+        h_text = tkinter.Label(he, text="Health: ")
         h_text.pack(side=LEFT)
-        s_text = Label(so, text="Social:  ")
+        s_text = tkinter.Label(so, text="Social:  ")
         s_text.pack(side=LEFT)
-        g_text = Label(gp, text="GPA:     ")
+        g_text = tkinter.Label(gp, text="GPA:     ")
         g_text.pack(side=LEFT)
         h.pack(side=RIGHT)
         s.pack(side=RIGHT)
@@ -124,36 +125,38 @@ class Menu():
         progress.pack()
 
     def newWindow(self):
-        self.frame = Frame(self.master)
-        title = Label(self.frame, text='Question 1')
+        self.frame = tk.Frame(self.master, bg='white')
+        title = tkinter.Label(self.frame, text='Question 1', font = ('Helvetica'))
         title.pack()
         self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
-        self.frame.pack()
+        self.frame.pack(pady=20, padx=20)
         Begin.bQuest1(self)
 
     def newWindow2(self, functionName, Q):
         if functionName != 'game_over' and Menu.gameOver is False:
-            self.frame = Frame(self.master)
-            title = Label(self.frame, text=Q)
+            self.frame = tk.Frame(self.master, bg='white')
+            title = tkinter.Label(self.frame, text=Q, font = ('Helvetica'))
             title.pack()
             self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
-            self.frame.pack()
+            self.frame.pack(pady=20, padx=20)
             func = getattr(Menu.m, functionName)(self)
         elif functionName == 'game_over':
             Menu.gameOver = True
-            self.frame = Frame(self.master)
-            title = Label(self.frame, text=Q)
+            self.frame = tk.Frame(self.master, bg='white')
+            title = tkinter.Label(self.frame, text=Q, font = ('Helvetica', 20))
             title.pack()
             self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
-            self.frame.pack()
+            self.frame.pack(pady=20, padx=20)
             func = getattr(Menu.m, functionName)(self)
 
     def popup1(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="Unfortunately you waited too long to start the project and had some unforeseen "
-                                      "difficulties. Because of this, you had to turn in the project late", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+        label = tkinter.Label(popup, text="Unfortunately you waited too long to start the project and had some unforeseen "
+                                      "difficulties. Because of this, you had to turn in the project late.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.g_bar -= 10
         B1.pack()
@@ -161,11 +164,13 @@ class Menu():
 
     def popup2(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="Oh no! The party got a little crazy and the cops were called. No big deal, "
+        label = tkinter.Label(popup, text="Oh no! The party got a little crazy and the cops were called. No big deal, "
                                       "but you aren't the angel that your parents think you are. Looks like you are "
-                                      "spending the weekend in jail.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "spending the weekend in jail.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.s_bar -= 10
         B1.pack()
@@ -173,11 +178,13 @@ class Menu():
 
     def popup3(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="So you decide to go to your brother's football game. However, in all of the "
+        label = tkinter.Label(popup, text="So you decide to go to your brother's football game. However, in all of the "
                                       "excitement you forgot to turn in your homework. Ouch, that's going to hurt "
-                                      "your grade.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "your grade.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.g_bar -= 10
         B1.pack()
@@ -185,10 +192,12 @@ class Menu():
 
     def popup4(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="Congraulations!!! All of that hardwork paid off and you won the weightllifting "
-                                      "competition.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+        label = tkinter.Label(popup, text="Congraulations!!! All of that hardwork paid off and you won the weightllifting "
+                                      "competition.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.h_bar += 10
         B1.pack()
@@ -196,11 +205,13 @@ class Menu():
 
     def popup5(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="Unfortunately you not putting in the extra practice caused you to not only not "
+        label = tkinter.Label(popup, text="Unfortunately you not putting in the extra practice caused you to not only not "
                                       "even place in the weightlifting competition, but caused to only make 2/6 "
-                                      "lifts.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "lifts.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.h_bar -= 10
         B1.pack()
@@ -208,12 +219,14 @@ class Menu():
 
     def popup6(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="You had this amazing idea to finish the project on the plane ride home. "
+        label = tkinter.Label(popup, text="You had this amazing idea to finish the project on the plane ride home. "
                                       "However, the WiFi was not working and you couldn't finish. You had to beg the "
                                       "professor to let you turn in the project with a 40% deduction on the "
-                                      "assignment. Not only did this hurt your grade, but also your pride.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "assignment. Not only did this hurt your grade, but also your pride.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.g_bar -= 10
         Menu.h_bar -= 5
@@ -222,12 +235,14 @@ class Menu():
 
     def popup7(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="The event was during one of your classes and you missed an attendance " \
+        label = tkinter.Label(popup, text="The event was during one of your classes and you missed an attendance " \
                                       "grade. It would’ve been worth it, but the companies just told you to apply "
                                       "online " \
-                                      "and it’s unlikely you will get a callback because they don’t hire freshmen.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "and it’s unlikely you will get a callback because they don’t hire freshmen.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.g_bar -= 10
         B1.pack()
@@ -235,11 +250,13 @@ class Menu():
 
     def popup8(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="Luckily, you impressed a small company in your hometown with your tenacity to "
+        label = tkinter.Label(popup, text="Luckily, you impressed a small company in your hometown with your tenacity to "
                                       "learn new things. They decided to give you a chance and they gave you an "
-                                      "internship for the summer.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "internship for the summer.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.s_bar += 10
         B1.pack()
@@ -247,11 +264,13 @@ class Menu():
 
     def popup9(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="You get sick because you haven’t " \
+        label = tkinter.Label(popup, text="You get sick because you haven’t " \
                                       "been eating well or getting enough sleep, and therefore have to turn your " \
-                                      "paper in late. ", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "paper in late. ", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.h_bar -= 10
         B1.pack()
@@ -259,10 +278,12 @@ class Menu():
 
     def popup10(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="Your friend's battery dies and has to stay a few " \
-                                      "extra days, so you have to cram for the test on Monday morning.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+        label = tkinter.Label(popup, text="Your friend's battery dies and has to stay a few " \
+                                      "extra days, so you have to cram for the test on Monday morning.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.s_bar += 5
         Menu.g_bar -= 5
@@ -271,11 +292,13 @@ class Menu():
 
     def popup11(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="Pop quiz! Good thing you were present. Professor KillJoy’s " \
+        label = tkinter.Label(popup, text="Pop quiz! Good thing you were present. Professor KillJoy’s " \
                                       "random question about the color of his shirt earned you 10 bonus points " \
-                                      "on the next test.)", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "on the next test.)", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.g_bar += 10
         B1.pack()
@@ -283,11 +306,13 @@ class Menu():
 
     def popup12(self):
         popup = Tk()
+        popup['bg'] = '#500000'
+        popup.geometry('600x150')
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="In all your efforts to " \
+        label = tkinter.Label(popup, text="In all your efforts to " \
                                       "not oversleep by staying up all night, you fall asleep 5 minutes before your" \
-                                      "registration time, and some of your classes fill up.", wraplength=500)
-        label.pack(side="top", fill="x", pady=10)
+                                      "registration time, and some of your classes fill up.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
+        label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         Menu.h_bar -= 10
         Menu.g_bar -= 3
@@ -299,8 +324,8 @@ class mainGame():
 
     def __init__(self, master):
         self.master = master
-        self.frame = Frame(self.master)
-        self.b3 = Button(self.master, text="text")
+        self.frame = tk.Frame(self.master, bg='white')
+        self.b3 = tkinter.Button(self.master, text="text", bg='white')
 
     # create widgets
 
