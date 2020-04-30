@@ -177,7 +177,7 @@ class Begin(Menu):
 
         question_description = "Whew! First round of midterms are finally over. You have decided that you want to " \
                                "take a little bit of a break this week. Do you: "
-        option_h = "Train for that weightlifting competition coming up.(popup. Win the weightlifting competition)"
+        option_h = "Train for that weightlifting competition coming up."
         option_s = "Go out with some friends. Do you even remember what they look like?"
         option_g = "Have some nice time to yourself. You have been meaning to read that book which has been \n" \
                    "collecting dust. "

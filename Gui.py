@@ -9,7 +9,7 @@ from tkinter.ttk import *
 import tkinter as tk
 
 from beginning import *
-
+from tkinter import font as tkFont
 
 # root that creates the main window, has to be first
 
@@ -152,9 +152,10 @@ class Menu():
         popup = Tk()
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="Unfortunately you waited too long to start the project and had some unforeseen "
-                                      "difficulties. Because of this, you had to turn in the project late")
+                                      "difficulties. Because of this, you had to turn in the project late", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.g_bar -= 10
         B1.pack()
         popup.mainloop()
 
@@ -163,9 +164,10 @@ class Menu():
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="Oh no! The party got a little crazy and the cops were called. No big deal, "
                                       "but you aren't the angel that your parents think you are. Looks like you are "
-                                      "spending the weekend in jail.")
+                                      "spending the weekend in jail.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.s_bar -= 10
         B1.pack()
         popup.mainloop()
 
@@ -174,9 +176,10 @@ class Menu():
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="So you decide to go to your brother's football game. However, in all of the "
                                       "excitement you forgot to turn in your homework. Ouch, that's going to hurt "
-                                      "your grade.")
+                                      "your grade.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.g_bar -= 10
         B1.pack()
         popup.mainloop()
 
@@ -184,9 +187,10 @@ class Menu():
         popup = Tk()
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="Congraulations!!! All of that hardwork paid off and you won the weightllifting "
-                                      "competition.")
+                                      "competition.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.h_bar += 10
         B1.pack()
         popup.mainloop()
 
@@ -195,9 +199,10 @@ class Menu():
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="Unfortunately you not putting in the extra practice caused you to not only not "
                                       "even place in the weightlifting competition, but caused to only make 2/6 "
-                                      "lifts/")
+                                      "lifts.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.h_bar -= 10
         B1.pack()
         popup.mainloop()
 
@@ -207,9 +212,11 @@ class Menu():
         label = ttk.Label(popup, text="You had this amazing idea to finish the project on the plane ride home. "
                                       "However, the WiFi was not working and you couldn't finish. You had to beg the "
                                       "professor to let you turn in the project with a 40% deduction on the "
-                                      "assignment. Not only did this hurt your grade, but also your pride.")
+                                      "assignment. Not only did this hurt your grade, but also your pride.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.g_bar -= 10
+        Menu.h_bar -= 5
         B1.pack()
         popup.mainloop()
 
@@ -219,9 +226,10 @@ class Menu():
         label = ttk.Label(popup, text="The event was during one of your classes and you missed an attendance " \
                                       "grade. It would’ve been worth it, but the companies just told you to apply "
                                       "online " \
-                                      "and it’s unlikely you will get a callback because they don’t hire freshmen.")
+                                      "and it’s unlikely you will get a callback because they don’t hire freshmen.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.g_bar -= 10
         B1.pack()
         popup.mainloop()
 
@@ -230,30 +238,34 @@ class Menu():
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="Luckily, you impressed a small company in your hometown with your tenacity to "
                                       "learn new things. They decided to give you a chance and they gave you an "
-                                      "internship for the summer.")
+                                      "internship for the summer.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.s_bar += 10
         B1.pack()
         popup.mainloop()
 
     def popup9(self):
         popup = Tk()
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="you get sick because you haven’t " \
+        label = ttk.Label(popup, text="You get sick because you haven’t " \
                                       "been eating well or getting enough sleep, and therefore have to turn your " \
-                                      "paper in late) ")
+                                      "paper in late. ", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.h_bar -= 10
         B1.pack()
         popup.mainloop()
 
     def popup10(self):
         popup = Tk()
         popup.wm_title("Random Event")
-        label = ttk.Label(popup, text="your friend's battery dies and has to stay a few " \
-                                      "extra days, so you have to cram for the test on Monday morning.")
+        label = ttk.Label(popup, text="Your friend's battery dies and has to stay a few " \
+                                      "extra days, so you have to cram for the test on Monday morning.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.s_bar += 5
+        Menu.g_bar -= 5
         B1.pack()
         popup.mainloop()
 
@@ -262,9 +274,10 @@ class Menu():
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="Pop quiz! Good thing you were present. Professor KillJoy’s " \
                                       "random question about the color of his shirt earned you 10 bonus points " \
-                                      "on the next test.)")
+                                      "on the next test.)", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.g_bar += 10
         B1.pack()
         popup.mainloop()
 
@@ -273,9 +286,11 @@ class Menu():
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="In all your efforts to " \
                                       "not oversleep by staying up all night, you fall asleep 5 minutes before your" \
-                                      "registration time, and some of your classes fill up.")
+                                      "registration time, and some of your classes fill up.", wraplength=500)
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
+        Menu.h_bar -= 10
+        Menu.g_bar -= 3
         B1.pack()
         popup.mainloop()
 
