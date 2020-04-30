@@ -129,7 +129,7 @@ class Menu():
         title = tkinter.Label(self.frame, text='Question 1', font = ('Helvetica'))
         title.pack()
         self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
-        self.frame.pack(pady=20, padx=20)
+        self.frame.pack(ipady=20, ipadx=20)
         Begin.bQuest1(self)
 
     def newWindow2(self, functionName, Q):
@@ -138,7 +138,7 @@ class Menu():
             title = tkinter.Label(self.frame, text=Q, font = ('Helvetica'))
             title.pack()
             self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
-            self.frame.pack(pady=20, padx=20)
+            self.frame.pack(ipady=20, ipadx=20)
             func = getattr(Menu.m, functionName)(self)
         elif functionName == 'game_over':
             Menu.gameOver = True
@@ -146,7 +146,7 @@ class Menu():
             title = tkinter.Label(self.frame, text=Q, font = ('Helvetica', 20))
             title.pack()
             self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
-            self.frame.pack(pady=20, padx=20)
+            self.frame.pack(ipady=20, ipadx=20)
             func = getattr(Menu.m, functionName)(self)
 
     def popup1(self):
