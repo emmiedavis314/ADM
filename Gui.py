@@ -33,10 +33,10 @@ class Menu():
                          command=lambda: [self.b1.pack_forget(), self.newWindow(), title.pack_forget()])
         foot = Label(self.master, text="Created for CSCE 445 @ TAMU by Natalie Burks, Emily Davis, Allison Reuthinger")
         foot.pack()
-        foot.pack(side=BOTTOM)
-        title.pack()
-        self.b1.pack()
-        self.frame.pack()
+        foot.pack(side=BOTTOM, pady=10)
+        title.pack(pady=15, padx=20)
+        self.b1.pack(pady=15)
+        self.frame.pack(pady=30,)
 
     def update_health(self, h, s, g):
         if (h == 100) and (s == 100) and (g == 100):
