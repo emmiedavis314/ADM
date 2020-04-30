@@ -6,7 +6,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter.ttk import *
 
-import tk as tk
+import tkinter as tk
 
 from beginning import *
 
@@ -47,11 +47,11 @@ class Menu():
         so = Frame(progress)
         gp = Frame(progress)
         hStyle = ttk.Style()
-        hStyle.theme_use('classic')
+        hStyle.theme_use('alt')
         sStyle = ttk.Style()
-        sStyle.theme_use('classic')
+        sStyle.theme_use('alt')
         gStyle = ttk.Style()
-        gStyle.theme_use('classic')
+        gStyle.theme_use('alt')
     # health status bar
         if(h_bar >= 80):
             hStyle.configure("green.Horizontal.TProgressbar", background='green')
@@ -221,7 +221,7 @@ class Menu():
         popup = Tk()
         popup.wm_title("Random Event")
         label = ttk.Label(popup, text="your friend's battery dies and has to stay a few " \
-                                      "extra days, so you have to cram for the test on Monday morning.)")
+                                      "extra days, so you have to cram for the test on Monday morning.")
         label.pack(side="top", fill="x", pady=10)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
         B1.pack()

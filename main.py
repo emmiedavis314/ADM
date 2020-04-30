@@ -66,7 +66,7 @@ class Buttons1():
 
 if __name__ == '__main__':
     root = Tk()
-    # root.geometry('250x250')
+    root.geometry('800x600')
     root['bg'] = '#500000'
     b = Menu(root)
     root.mainloop()
