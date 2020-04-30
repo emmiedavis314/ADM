@@ -14,9 +14,9 @@ class Begin(Menu):
         option_s = "Suggest Chick-Fil-A at the MSC for lunch!"
         option_g = "Skip lunch and go to class."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest2', 'question2')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest2', 'question2')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest2', 'question2')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest2', 'question2')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest2', 'question2')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest2', 'question2')])
         question.pack()
         h.pack()
         s.pack()
@@ -31,9 +31,9 @@ class Begin(Menu):
         option_s = "Party it UPPPP!!! It’s college; you are supposed to make mistakes."
         option_g = "Stay home and study."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest3', 'question3')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest3', 'question3')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest3', 'question3')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest3', 'question3')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest3', 'question3')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest3', 'question3')])
         question.pack()
         h.pack()
         s.pack()
@@ -47,9 +47,9 @@ class Begin(Menu):
         option_s = "Procrastinate and play Animal Crossing with some friends, it’s not due until next week anyway."
         option_g = "Start early, you have never coded before."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest4', 'question 4')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest4', 'question 4'), self.popup1()])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest4', 'question 4')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest4', 'question 4')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest4', 'question 4'), self.popup1()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest4', 'question 4')])
         question.pack()
         h.pack()
         s.pack()
@@ -64,9 +64,9 @@ class Begin(Menu):
                    "anyways. "
         option_g = "Who cares about football? You’ll be in class though."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest5', 'question 5')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest5', 'question 5')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest5', 'question 5')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest5', 'question 5')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest5', 'question 5')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest5', 'question 5')])
         question.pack()
         h.pack()
         s.pack()
@@ -80,9 +80,9 @@ class Begin(Menu):
         option_s = "Meet up with your suitemates for a breakfast date"
         option_g = "No way. What if they take attendance?"
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.newWindow2('bQuest6', 'question 6'), self.update_health(0, 5, 5)])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest6', 'question 6')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest6', 'question 6')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.newWindow2('bQuest6', 'question 6'), self.update_health(-5, 5, 5)])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest6', 'question 6')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest6', 'question 6')])
         question.pack()
         h.pack()
         s.pack()
@@ -96,9 +96,9 @@ class Begin(Menu):
         option_s = "Go and have fun! This is your first college party."
         option_g = "Start planning for the week to come."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest7', 'question 7')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest7', 'question 7'), self.popup2()])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest7', 'question 7')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest7', 'question 7')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest7', 'question 7'), self.popup2()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest7', 'question 7')])
         question.pack()
         h.pack()
         s.pack()
@@ -113,9 +113,9 @@ class Begin(Menu):
                    "for your exam with your friends. "
         option_g = "Skip breakaway and study at Zachry."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest8', 'question 8')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest8', 'question 8')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest8', 'question 8')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest8', 'question 8')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest8', 'question 8')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest8', 'question 8')])
         question.pack()
         h.pack()
         s.pack()
@@ -129,9 +129,9 @@ class Begin(Menu):
         option_s = "Go and spend some quality time with your friends over a plate of cheese fries!"
         option_g = "Offer to order cheese fries to go if your roomies will study with you in ZACH instead :)"
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest9', 'question 9')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest9', 'question 9')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest9', 'question 9')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest9', 'question 9')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest9', 'question 9')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest9', 'question 9')])
         question.pack()
         h.pack()
         s.pack()
@@ -146,9 +146,9 @@ class Begin(Menu):
                    "takes care of themselves and studies hard."
         option_g = "Total study overdrive. Red bull and Evans, here you come!"
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest10', 'question 10')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest10', 'question 10')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest10', 'question 10')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest10', 'question 10')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest10', 'question 10')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest10', 'question 10')])
         question.pack()
         h.pack()
         s.pack()
@@ -165,9 +165,9 @@ class Begin(Menu):
         option_g = "Tell your brother that you will congratulate him with ice cream when he is done, and head " \
                    "straight home to finish your assignment."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest11', 'question 11')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest11', 'question 11'), self.popup3()])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest11', 'question 11')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest11', 'question 11')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest11', 'question 11'), self.popup3()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest11', 'question 11')])
         question.pack()
         h.pack()
         s.pack()
@@ -182,9 +182,9 @@ class Begin(Menu):
         option_g = "Have some nice time to yourself. You have been meaning to read that book which has been " \
                    "collecting dust. "
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest12', 'question 12'), self.popup4()])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest12', 'question 12'), self.popup5()])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest12', 'question 12'), self.popup5()])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest12', 'question 12'), self.popup4()])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest12', 'question 12'), self.popup5()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest12', 'question 12'), self.popup5()])
         question.pack()
         h.pack()
         s.pack()
@@ -197,9 +197,9 @@ class Begin(Menu):
         option_s = "Go to the party. You did say that you were taking a break."
         option_g = "Stay in. You're tired of being around people."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest13', 'question 13')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest13', 'question 13')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest13', 'question 13')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest13', 'question 13')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest13', 'question 13')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest13', 'question 13')])
         question.pack()
         h.pack()
         s.pack()
@@ -213,9 +213,9 @@ class Begin(Menu):
         option_s = "Skip class and stay up late. You didn't realize how much work you were procrastinating on."
         option_g = "Go to class. Cheers to late nights at Zachary."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest14', 'question 14')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest14', 'question 14')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest14', 'question 14')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest14', 'question 14')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest14', 'question 14')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest14', 'question 14')])
         question.pack()
         h.pack()
         s.pack()
@@ -229,9 +229,9 @@ class Begin(Menu):
         option_s = "Have a relaxation weekend. It's been a tough week."
         option_g = "Go to Zachry and get some work done."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest15', 'question 15')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest15', 'question 15')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest15', 'question 15')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest15', 'question 15')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest15', 'question 15')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest15', 'question 15')])
         question.pack()
         h.pack()
         s.pack()
@@ -246,9 +246,9 @@ class Begin(Menu):
         option_s = "Skip class and hang out with your friends."
         option_g = "Skip lectures this week. It’s not like they are useful anyway."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest16', 'question 16')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest16', 'question 16')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest16', 'question 16')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest16', 'question 16')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest16', 'question 16')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest16', 'question 16')])
         question.pack()
         h.pack()
         s.pack()
@@ -263,9 +263,9 @@ class Begin(Menu):
         option_s = "Go!!! You have never been to California and it's your best friend."
         option_g = "Send a birthday gift instead. You really can’t miss the deadline for this project."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest17', 'question 17')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest17', 'question 17'), self.popup6()])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest17', 'question 17')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest17', 'question 17')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest17', 'question 17'), self.popup6()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest17', 'question 17')])
         question.pack()
         h.pack()
         s.pack()
@@ -280,9 +280,9 @@ class Begin(Menu):
         option_g = "Don’t go because you have not built up enough skill yet. You then spend " \
                    "all weekend on learning app development."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest18', 'question 18')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest18', 'question 18'), self.popup7()])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest18', 'question 18'), self.popup8()])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest18', 'question 18')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest18', 'question 18'), self.popup7()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest18', 'question 18'), self.popup8()])
         question.pack()
         h.pack()
         s.pack()
@@ -296,9 +296,9 @@ class Begin(Menu):
         option_s = "Try your best and figure it out on your own."
         option_g = "Go to office Hours. You really don’t know what you are doing."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest19', 'question 19')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest19', 'question 19')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest19', 'question 19')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest19', 'question 19')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest19', 'question 19')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest19', 'question 19')])
         question.pack()
         h.pack()
         s.pack()
@@ -311,9 +311,9 @@ class Begin(Menu):
         option_s = ""
         option_g = ""
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest20', 'question 20')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest20', 'question 20')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest20', 'question 20')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest20', 'question 20')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest20', 'question 20')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest20', 'question 20')])
         question.pack()
         h.pack()
         s.pack()
@@ -326,9 +326,9 @@ class Begin(Menu):
         option_s = ""
         option_g = ""
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest21', 'question 21')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest21', 'question 21')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest21', 'question 21')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest21', 'question 21')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest21', 'question 21')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest21', 'question 21')])
         question.pack()
         h.pack()
         s.pack()
@@ -345,9 +345,9 @@ class Begin(Menu):
         option_g = "Burn the midnight oil to get your project done early. You never know what " \
                    "problems might come up."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest22', 'question 22')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest22', 'question 22')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest22', 'question 22'), self.popup9()])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest22', 'question 22')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest22', 'question 22')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest22', 'question 22'), self.popup9()])
         question.pack()
         h.pack()
         s.pack()
@@ -363,9 +363,9 @@ class Begin(Menu):
         option_s = "Go to the dunk, cheer on your mom and dad, and enjoy a crazy camp reunion!"
         option_g = "Stay home and study. You’ve got the rest of college to go to dunks. "
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest23', 'question 23')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest23', 'question 23')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest23', 'question 23')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest23', 'question 23')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest23', 'question 23')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest23', 'question 23')])
         question.pack()
         h.pack()
         s.pack()
@@ -381,9 +381,9 @@ class Begin(Menu):
                    "base of company interests and what potential internships and research" \
                    "possibilities there are. "
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest24', 'question 24')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest24', 'question 24')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest24', 'question 24')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest24', 'question 24')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest24', 'question 24')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest24', 'question 24')])
         question.pack()
         h.pack()
         s.pack()
@@ -402,9 +402,9 @@ class Begin(Menu):
         option_g = "After you show her around campus some, you go to The Brew so that you" \
                    "both can get some last minute studying in before the game."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest25', 'question 25')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest25', 'question 25'), self.popup10()])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest25', 'question 25')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest25', 'question 25')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest25', 'question 25'), self.popup10()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest25', 'question 25')])
         question.pack()
         h.pack()
         s.pack()
@@ -423,9 +423,9 @@ class Begin(Menu):
         option_g = "Start working on them now, but plan to come back early and get some " \
                    "undivided time to work on your projects. "
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest26', 'question 26')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest26', 'question 26')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest26', 'question 26')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest26', 'question 26')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest26', 'question 26')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest26', 'question 26')])
         question.pack()
         h.pack()
         s.pack()
@@ -444,9 +444,9 @@ class Begin(Menu):
                    "friends before not seeing each other for a whole week."
         option_g = "You decided to suck it up and stay to take notes for all of your friends."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest27', 'question 27')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest27', 'question 27')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest27', 'question 27'), self.popup11()])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest27', 'question 27')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest27', 'question 27')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest27', 'question 27'), self.popup11()])
         question.pack()
         h.pack()
         s.pack()
@@ -462,9 +462,9 @@ class Begin(Menu):
                    "on homework, go to bed at your normal time, and wake up 30 minutes " \
                    "early to register. "
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest28', 'question 28')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest28', 'question 28'), self.popup12()])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest28', 'question 28')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest28', 'question 28')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest28', 'question 28'), self.popup12()])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest28', 'question 28')])
         question.pack()
         h.pack()
         s.pack()
@@ -482,9 +482,9 @@ class Begin(Menu):
         option_g = "Are you kidding?! I still have 3 finals, 4 projects, a presentation, and 2 lab " \
                    "reports due. There is no time for games. Even if it is 42."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest29', 'question 29')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest29', 'question 29')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest29', 'question 29')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest29', 'question 29')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest29', 'question 29')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest29', 'question 29')])
         question.pack()
         h.pack()
         s.pack()
@@ -498,9 +498,9 @@ class Begin(Menu):
         option_s = "No class means no schoolwork! Take the day off and hang out with friends."
         option_g = "The semester is almost over, push through and study some more."
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest30', 'question 30')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest30', 'question 30')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest30', 'question 30')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('bQuest30', 'question 30')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('bQuest30', 'question 30')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('bQuest30', 'question 30')])
         question.pack()
         h.pack()
         s.pack()
@@ -522,10 +522,20 @@ class Begin(Menu):
                    "chapters 9-12, Monday: chapters 13-15, Tuesday: review semester notes, " \
                    "Wednesday: study old tests, Thursday: ace exam!! "
         question = Label(self.frame, text=question_description)
-        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(0, 5, 5), self.newWindow2('bQuest1', 'question 1')])
-        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 0, 5), self.newWindow2('bQuest1', 'question 1')])
-        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, 0), self.newWindow2('bQuest1', 'question 1')])
+        h = Button(self.frame, text=option_h, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(-5, 5, 5), self.newWindow2('game_over', 'Game Over!')])
+        s = Button(self.frame, text=option_s, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, -5, 5), self.newWindow2('game_over', 'Game Over!')])
+        g = Button(self.frame, text=option_g, command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.update_health(5, 5, -5), self.newWindow2('game_over', 'Game Over!')])
         question.pack()
         h.pack()
         s.pack()
         g.pack()
+
+
+    def game_over(self):
+        health = self.h_bar
+        social = self.s_bar
+        gpa = self.g_bar
+        stats = Label(self.frame, text="Health: " + repr(health) + "\nSocial: " + repr(social) + "\nGPA: " + repr(gpa))
+        start_over = Button(self.frame, text="Play Again", command=lambda: [Begin.bQuest2(self), self.frame.pack_forget(), self.reset(), self.update_health(100, 100, 100), self.newWindow2('bQuest1', 'question 1')])
+        stats.pack()
+        start_over.pack()

@@ -20,6 +20,10 @@ class Menu():
     h_bar = 100
     g_bar = 100
     functionName = "Hello"
+    gameOver = False
+
+    def reset(self):
+        Menu.gameOver = False
 
     def __init__(self, master):
         self.master = master
@@ -35,9 +39,26 @@ class Menu():
         self.frame.pack()
 
     def update_health(self, h, s, g):
-        Menu.h_bar -= h
-        Menu.s_bar -= s
-        Menu.g_bar -= g
+        if (h == 100) and (s == 100) and (g == 100):
+            Menu.h_bar = 100
+            Menu.s_bar = 100
+            Menu.g_bar = 100
+        else:
+            if Menu.h_bar - h <= 100:
+                Menu.h_bar -= h
+                if Menu.h_bar <= 0:
+                    self.newWindow2('game_over', 'You lose! Health at 0.')
+                    return
+            if Menu.s_bar - s <= 100:
+                Menu.s_bar -= s
+                if Menu.s_bar <= 0:
+                    self.newWindow2('game_over', 'You lose! Social at 0.')
+                    return
+            if Menu.g_bar - g <= 100:
+                Menu.g_bar -= g
+                if Menu.g_bar <= 0:
+                    self.newWindow2('game_over', 'You lose! GPA at 0.')
+                    return
         # self.healthbars(Menu.h_bar, Menu.s_bar, Menu.g_bar)
         # self.newWindow()
 
@@ -111,12 +132,21 @@ class Menu():
         Begin.bQuest1(self)
 
     def newWindow2(self, functionName, Q):
-        self.frame = Frame(self.master)
-        title = Label(self.frame, text=Q)
-        title.pack()
-        self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
-        self.frame.pack()
-        func = getattr(Menu.m, functionName)(self)
+        if functionName != 'game_over' and Menu.gameOver is False:
+            self.frame = Frame(self.master)
+            title = Label(self.frame, text=Q)
+            title.pack()
+            self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
+            self.frame.pack()
+            func = getattr(Menu.m, functionName)(self)
+        elif functionName == 'game_over':
+            Menu.gameOver = True
+            self.frame = Frame(self.master)
+            title = Label(self.frame, text=Q)
+            title.pack()
+            self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
+            self.frame.pack()
+            func = getattr(Menu.m, functionName)(self)
 
     def popup1(self):
         popup = Tk()
