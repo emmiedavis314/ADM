@@ -30,13 +30,13 @@ class Menu():
         self.master = master
         self.frame = Frame(self.master)
         title = tkinter.Label(self.master, text = 'Welcome to Aggie Decision Maker!', font = ('Helvetica',30), bg = '#500000', fg = 'white')
-        self.b1 = tkinter.Button(self.master, text="Begin",
+        self.b1 = tkinter.Button(self.master, text="Begin", font=('Helvetica'),
                          command=lambda: [self.b1.pack_forget(), self.newWindow(), title.pack_forget()])
         foot = tkinter.Label(self.master, text="Created for CSCE 445 @ TAMU by Natalie Burks, Emily Davis, Allison Reuthinger", font = ('Helvetica'), bg = '#500000', fg = 'white')
         foot.pack()
         foot.pack(side=BOTTOM, pady=10)
         title.pack(pady=15, padx=20)
-        self.b1.pack(pady=15)
+        self.b1.pack(pady=15, fill="none", expand=True, ipady=5, ipadx=10)
         self.frame.pack(pady=30,)
 
     def update_health(self, h, s, g):
