@@ -110,11 +110,11 @@ class Menu():
         h['value'] = Menu.h_bar
         s['value'] = Menu.s_bar
         g['value'] = Menu.g_bar
-        h_text = tkinter.Label(he, text="Health: ")
+        h_text = tkinter.Label(he, text="Health: ", bg='white')
         h_text.pack(side=LEFT)
-        s_text = tkinter.Label(so, text="Social:  ")
+        s_text = tkinter.Label(so, text="Social:  ", bg='white')
         s_text.pack(side=LEFT)
-        g_text = tkinter.Label(gp, text="GPA:     ")
+        g_text = tkinter.Label(gp, text="GPA:     ", bg='white')
         g_text.pack(side=LEFT)
         h.pack(side=RIGHT)
         s.pack(side=RIGHT)
@@ -126,7 +126,7 @@ class Menu():
 
     def newWindow(self):
         self.frame = tk.Frame(self.master, bg='white')
-        title = tkinter.Label(self.frame, text='Question 1', font = ('Helvetica'))
+        title = tkinter.Label(self.frame, text='Question 1', font = ('Helvetica'), bg='white')
         title.pack()
         self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
         self.frame.pack(ipady=20, ipadx=20)
@@ -135,7 +135,7 @@ class Menu():
     def newWindow2(self, functionName, Q):
         if functionName != 'game_over' and Menu.gameOver is False:
             self.frame = tk.Frame(self.master, bg='white')
-            title = tkinter.Label(self.frame, text=Q, font = ('Helvetica'))
+            title = tkinter.Label(self.frame, text=Q, font = ('Helvetica'), bg='white')
             title.pack()
             self.healthbars(Menu.s_bar, Menu.g_bar, Menu.h_bar)
             self.frame.pack(ipady=20, ipadx=20)
