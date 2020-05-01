@@ -199,7 +199,10 @@ class Menu():
                                       "competition.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
         label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
-        Menu.h_bar += 10
+        if Menu.h_bar + 10 > 100:
+            Menu.h_bar = 100
+        else:
+            Menu.h_bar += 10
         B1.pack()
         popup.mainloop()
 
@@ -258,7 +261,10 @@ class Menu():
                                       "internship for the summer.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
         label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
-        Menu.s_bar += 10
+        if Menu.s_bar + 10 > 100:
+            Menu.s_bar = 100
+        else:
+            Menu.s_bar += 10
         B1.pack()
         popup.mainloop()
 
@@ -285,8 +291,11 @@ class Menu():
                                       "extra days, so you have to cram for the test on Monday morning.", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
         label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
-        Menu.s_bar += 5
-        Menu.g_bar -= 5
+        if Menu.s_bar + 5 > 100:
+            Menu.s_bar = 100
+        else:
+            Menu.s_bar += 10
+        Menu.g_bar -= 10
         B1.pack()
         popup.mainloop()
 
@@ -300,7 +309,10 @@ class Menu():
                                       "on the next test.)", wraplength=500, bg='#500000', fg='white', font=('Helvetica'))
         label.pack(side="top", fill="x", pady=20, padx=20)
         B1 = ttk.Button(popup, text="Okay", command=popup.destroy)
-        Menu.g_bar += 10
+        if Menu.g_bar + 10 > 100:
+            Menu.g_bar = 100
+        else:
+            Menu.g_bar += 10
         B1.pack()
         popup.mainloop()
 
